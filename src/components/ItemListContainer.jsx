@@ -1,5 +1,6 @@
 // src/components/ItemListContainer.jsx
 import React from 'react';
+import BreadImage from '../assets/bread-image.png';
 
 const ItemListContainer = ({ greeting, texto }) => {
   return (
@@ -12,8 +13,18 @@ const ItemListContainer = ({ greeting, texto }) => {
           </div>
         </div>
       </div>
+      <div className="row justify-content-center mt-4">
+        <div className="col-md-6 text-center">
+          <img
+            src={BreadImage}
+            alt="Pancito humeante"
+            className="img-fluid"
+          />
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ItemListContainer;
+

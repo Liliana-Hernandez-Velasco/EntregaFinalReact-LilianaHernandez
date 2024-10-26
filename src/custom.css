@@ -72,4 +72,7 @@
   .welcome-card p {
     color: var(--fantasy-pink);
   }
-  
+  .image1 {
+    max-height:'300px'; 
+    object-fit:'contain';
+}
