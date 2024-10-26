@@ -1,0 +1,75 @@
+/* src/assets/custom.css */
+:root {
+    --fantasy-pink: #ff6fbf;
+    --mint-blue: #8cecff;
+  }
+  
+  /* Background general y elementos principales */
+  body {
+    background-color: var(--mint-blue);
+  }
+  
+  .navbar, .card {
+    background-color: var(--fantasy-pink) !important;
+    color: white;
+  }
+  /* src/assets/custom.css */
+:root {
+    --fantasy-pink: #ff6fbf;
+    --mint-blue: #8cecff;
+  }
+  
+  .navContainer {
+    background-color: var(--fantasy-pink) !important;
+  }
+  
+  
+  .btn-primary {
+    background-color: var(--fantasy-pink);
+    border-color: var(--fantasy-pink);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--mint-blue);
+    border-color: var(--mint-blue);
+    color: #333;
+  }
+  
+  .card-title, .lead, h1 {
+    color: white;
+  }
+  
+  /* Estilo adicional para el carrito */
+  .cart-widget {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .badge {
+    background-color: white;
+    color: var(--fantasy-pink);
+  }
+/* src/assets/custom.css */
+:root {
+    --fantasy-pink: #ff6fbf;
+    --mint-blue: #8cecff;
+  }
+
+  .welcome-card {
+    background-color: white;
+    border: 4px solid var(--fantasy-pink);
+    color: var(--fantasy-pink);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .welcome-card h1 {
+    color: var(--fantasy-pink);
+  }
+  
+  .welcome-card p {
+    color: var(--fantasy-pink);
+  }
+  
