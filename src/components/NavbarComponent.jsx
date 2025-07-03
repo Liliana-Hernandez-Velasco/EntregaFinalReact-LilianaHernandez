@@ -6,7 +6,7 @@ const NavbarComponent = () =>{
             <a className='aLink'>Productos</a>
             <a className='aLink'>Ofertas</a>
             <a className='aLink'>Más vendidos</a>
-            <CarWidget counter={15}/>
+            <CarWidget counter={13}/>
         </nav>
     )
 }
