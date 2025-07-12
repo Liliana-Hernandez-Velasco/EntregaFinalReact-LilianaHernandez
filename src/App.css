@@ -12,10 +12,15 @@
 
 .aLink{
   color:white;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
 }
-
+.aLogo{
+  color:wheat;
+  font-weight: 900;
+  text-decoration: peachpuff;
+  width: 8rem;
+}
 .cartWidgetContainer{
   display: flex;
   justify-content: space-between;
