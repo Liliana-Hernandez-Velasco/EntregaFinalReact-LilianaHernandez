@@ -3,10 +3,9 @@ const NavbarComponent = () =>{
     return(
         <nav className="navContainer">
             <img alt='logo' src='../FantasyBakeryLogo.png' className="aLogo"/>
-            <a className='aLink'>Home</a>
-            <a className='aLink'>Productos</a>
-            <a className='aLink'>Ofertas</a>
-            <a className='aLink'>Más vendidos</a>
+            <a className="anchor-nav" href="">Home</a>  
+            <a className="anchor-nav" href="">Productos</a> 
+            <a className="anchor-nav" href="">Ofertas</a>       
             <CarWidget counter={13}/>
         </nav>
     )
