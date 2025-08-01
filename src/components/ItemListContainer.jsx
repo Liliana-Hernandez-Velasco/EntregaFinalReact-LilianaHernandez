@@ -23,7 +23,7 @@ const esHome = location.pathname === '/';
         const filtrados = data.filter(item => item.categoria === categoriaId);
         setItems(filtrados);
       } else {
-        // Si no hay categoría en la URL, muestra todos
+        // NOTA: Si no hay categoría en la URL, muestra todos, Podría mejor poner el Top10 pero ya no ya hay que entregar.
         setItems(data);
       }
     });
