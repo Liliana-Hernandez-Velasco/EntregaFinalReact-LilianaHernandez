@@ -1,13 +1,31 @@
-import CarWidget from "./CarWidget"
-const NavbarComponent = () =>{
-    return(
-        <nav className="navContainer">
-            <img alt='logo' src='../FantasyBakeryLogo.png' className="aLogo"/>
-            <a className="anchor-nav" href="">Home</a>  
-            <a className="anchor-nav" href="">Productos</a> 
-            <a className="anchor-nav" href="">Ofertas</a>       
-            <CarWidget counter={13}/>
-        </nav>
-    )
-}
-export default NavbarComponent
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import CarWidget from './CarWidget';
+import { CartContext } from '../components/CartContext';
+
+const NavbarComponent = () => {
+  const { cart } = useContext(CartContext); 
+
+  return (
+    <nav className="navContainer">
+      {}
+      <Link to="/">
+        <img alt="logo" src="/FantasyBakeryLogo.png" className="aLogo" />
+      </Link>
+
+      {}
+      <Link className="anchor-nav" to="/categoria/Top10">Top 10</Link>
+      <Link className="anchor-nav" to="/categoria/Productos">Productos</Link>
+      <Link className="anchor-nav" to="/categoria/Ofertas">Ofertas</Link>
+
+      {}
+      <Link to="/cart">
+        <CarWidget counter={cart.length} />
+      </Link>
+    </nav>
+  );
+};
+
+export default NavbarComponent;
+
+
