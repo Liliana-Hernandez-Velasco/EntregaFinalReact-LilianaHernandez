@@ -1,8 +1,28 @@
-# React + Vite
+# 🧁 Fantasy Bakery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fantasy Bakery es una tienda de repostería en línea desarrollada con **React** y **Firebase**. Su propósito es ofrecer una experiencia mágica de compra con un toque dulce de fantasía.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Navegación por categorías: Top 10, Productos y Ofertas.
+- Visualización de detalles del producto.
+- Carrito de compras con control de cantidades.
+- Checkout funcional con orden registrada en Firestore.
+- Visualización de ID de orden tras compra exitosa.
+- Mensajes condicionales: producto sin stock, carrito vacío, etc.
+
+## 🔧 Tecnologías utilizadas
+
+- React
+- React Router
+- Firebase (Firestore)
+- Bootstrap 5
+- Vite
+
+## 📦 Instalación
+
+```bash
+git clone 
+cd fantasy-bakery
+npm install
+npm run dev

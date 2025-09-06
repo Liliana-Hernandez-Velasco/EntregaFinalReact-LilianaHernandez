@@ -6,6 +6,8 @@ import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'; 
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
+import UploadProductos from './components/UploadProductos';
+import Checkout from './components/Checkout';
 function App() {
   return (
        <BrowserRouter>
@@ -16,6 +18,8 @@ function App() {
         <Route path="/detalle/:id" element={<ItemDetailContainer />} />
         <Route path="/cart" element={<Cart />} />
         <Route path='*' element={<NotFound/>}/>
+        <Route path="/upload" element={<UploadProductos />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
    

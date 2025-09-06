@@ -3,12 +3,14 @@ import { useParams } from 'react-router-dom';
 import BreadImage from '../assets/bread-image.png';
 import ItemList from './ItemList'; 
 import { useLocation } from 'react-router-dom';
-import productos from '../data/Productos';
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../service/firebase";
 //Promesas
-const getProductos = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(productos), 1000);
-  });
+const getProductosFromFirestore = async () => {
+  const productosRef = collection(db, "productos");
+  const snapshot = await getDocs(productosRef);
+  const productos = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  return productos;
 };
 
 const ItemListContainer = ({ greeting, texto }) => {
@@ -17,17 +19,23 @@ const ItemListContainer = ({ greeting, texto }) => {
   const location = useLocation();
 const esHome = location.pathname === '/';
 
-  useEffect(() => {
-    getProductos().then(data => {
+useEffect(() => {
+  getProductosFromFirestore()
+    .then(data => {
       if (categoriaId) {
-        const filtrados = data.filter(item => item.categoria === categoriaId);
+        const filtrados = data.filter(
+          item => item.categoria.toLowerCase() === categoriaId.toLowerCase()
+        );
         setItems(filtrados);
       } else {
-        // NOTA: Si no hay categoría en la URL, muestra todos, Podría mejor poner el Top10 pero ya no ya hay que entregar.
         setItems(data);
       }
+    })
+    .catch(error => {
+      console.error("Error al obtener productos:", error);
     });
-  }, [categoriaId]);
+}, [categoriaId]);
+
 const nombresCategorias = {
   productos: "Productos",
   ofertas: "Ofertas",

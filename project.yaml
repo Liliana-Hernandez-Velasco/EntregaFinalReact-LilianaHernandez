@@ -1,0 +1,27 @@
+project:
+  name: Fantasy Bakery
+  description: |
+    Un e-commerce encantado para la venta de panadería mágica. Incluye catálogo de productos,
+    carrito de compras, integración con Firebase y visuales en tonos menta y rosa.
+  version: 1.0.0
+  authors:
+    - name: Liliana Hernández/Coderhouse/Chat GPT sobre todo para cuando uno la regó. 
+      role: Fullstack Developer & Diseñadora del Proyecto
+      email: hernandez.velasco.liliana@gmail.com
+  stack:
+    frontend:
+      - React 18
+      - Bootstrap 5
+      - Vite
+    backend:
+      - Firebase Firestore
+      - Firebase Hosting
+  features:
+    - Vista de productos por categoría (Top10, Productos, Ofertas)
+    - Detalle por producto
+    - Carrito de compras
+    - Checkout con validación
+    - Confirmación con ID de orden en Firebase
+    - Carga automática de productos con Upload
+  status: En desarrollo activo 🚧
+  license: MIT
