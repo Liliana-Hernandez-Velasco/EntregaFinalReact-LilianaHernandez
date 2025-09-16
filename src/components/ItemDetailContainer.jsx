@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
         if (docSnap && docSnap.exists()) {
           setProducto({ id: docSnap.id, ...docSnap.data() });
         } else {
-          console.log('No se encontró el producto con id:', id);
+          console.log(`No se encontró el producto con id: ${id}`);
         }
       } catch (error) {
         console.error('Error al obtener el producto:', error);
@@ -35,9 +35,7 @@ const ItemDetailContainer = () => {
       {!producto ? (
         <p className="text-center">Cargando producto...</p>
       ) : producto.stock === 0 ? (
-        <p className="text-center text-danger">
-          Producto sin stock 🫤
-        </p>
+        <p className="text-center text-danger">Producto sin stock 🫤</p>
       ) : (
         <ItemDetail producto={producto} />
       )}
@@ -46,5 +44,6 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
+
 
 
